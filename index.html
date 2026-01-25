@@ -20,21 +20,18 @@
 <nav class="navbar">
     <div class="container nav-container">
 
-        <!-- Logo -->
-        <a href="#" class="logo">Rumor Solis<span>.</span></a>
+        <a href="#home" class="logo">BLEND Caffè<span>.</span></a>
 
-        <!-- Navigation links -->
         <ul class="nav-list">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">Our Story</a></li>
             <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
-        <!-- Actions -->
         <div class="nav-actions">
             <a href="#contact" class="btn btn-sm primary">Book a Table</a>
-
             <button class="mobile-nav-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -42,102 +39,166 @@
     </div>
 </nav>
 
-<!-- ================= MAIN ================= -->
 <main>
 
-    <!-- ================= HERO SECTION ================= -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+        <span class="hero-badge">Est. 2010</span>
 
-        <div class="hero-content container">
-            <span class="hero-badge">Est. 2010</span>
+        <h1 class="hero-title">
+            Brewed to Perfection,<br>Served with Soul.
+        </h1>
 
-            <h1 class="hero-title">
-                Authentic Flavors,<br>
-                Fresh Ingredients
-            </h1>
+        <p class="hero-subtitle">
+            Where roasted beans meet quiet conversations.
+        </p>
 
-            <p class="hero-subtitle">
-               “Crafted with love, served with warmth, remembered forever.”
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#menu" class="btn primary">Explore Menu</a>
-                <a href="#about" class="btn outline">Our Story</a>
-            </div>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn primary">Explore Menu</a>
+            <a href="#about" class="btn outline">Our Story</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ================= ABOUT SECTION ================= -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="about-grid">
-
-                <!-- Image -->
-                <div class="about-image-wrapper">
-                    <img 
+<!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="section about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image-wrapper">
+                <img 
                     src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1350&q=80"
-
-
-                        alt="Exquisite Dish"
-                        class="main-img"
-                    >
-
-                    <div class="experience-badge">
-                        <span class="num">15+</span>
-                        <span class="txt">Years of<br>Excellence</span>
-                    </div>
+                    alt="Exquisite Dish"
+                    class="main-img"
+                >
+                <div class="experience-badge">
+                    <span class="num">15+</span>
+                    <span class="txt">Years of<br>Excellence</span>
                 </div>
+            </div>
 
-                <!-- Content -->
-                <div class="about-text">
-                    <span class="sub-heading">An Elevated Dining Experience</span>
-                    <h2 class="section-title">A Story Told Through Flavor</h2>
-
-                    <p>
-                        Every dish is meticulously crafted using the finest ingredients for an elevated dining experience.
-                    </p>
-
-                    <p>
-                        Located at the heart of Mumbai, where refined service meets an inviting ambiance.
-                    </p>
-
-                    <a href="#menu" class="btn-text">
-                       Taste What We’re Known For <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
+            <div class="about-text">
+                <span class="sub-heading">An Elevated Dining Experience</span>
+                <h2 class="section-title">A Story Told Through Flavor</h2>
+                <p>Every dish is meticulously crafted using the finest ingredients.</p>
+                <p>Located at the heart of Mumbai.</p>
+                <a href="#menu" class="btn-text">
+                    Taste What We’re Known For <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
-    </section>
-    <!-- ================= MENU SECTION ================= -->
-     <section id="menu" class="section-light">
-        <div class="container">
+    </div>
+</section>
 
-            <!-- section header -->
-             <div class="section-header">
-                <span class="sub-heading">Signature Flavors</span>
-                <h2 class="section-title">Explore Our Menu</h2>
+<!-- ================= MENU SECTION ================= -->
+<section id="menu" class="section light">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="sub-heading">Signature Flavors</span>
+            <h2 class="section-title">Explore Our Menu</h2>
         </div>
-        <!-- search input -->
-         <div class="menu-search">
-            <input type="text" id="menu-search-input" placeholder="Search dishes..." aria-label="search menu items">
-         </div>
 
-         <!-- category filters -->
-          <div class="filter-group">
+        <div class="menu-search">
+            <input type="text" id="menu-search-input" placeholder="Search dishes...">
+        </div>
+
+        <div class="filter-group">
             <button class="filter-btn active" data-category="all">All Dishes</button>
-            <button class="filter-btn" data-category="starters">Starters</button>
-            <button class="filter-btn" data-category="main-course">Main Course</button>
+            <button class="filter-btn" data-category="snacks">Snacks</button>
+            <button class="filter-btn" data-category="beverage">Beverages</button>
+            <button class="filter-btn" data-category="coffee-shop">Coffee Shop</button>
             <button class="filter-btn" data-category="desserts">Desserts</button>
-          </div>
-          <!-- menu items container(js render here) -->
-           <div class="menu-grid" id="menu-items-container">
-            <!-- Menu items will be dynamically inserted here -->
-              </div>
-     </section>
+        </div>
+
+        <div class="menu-grid" id="menu-items-container"></div>
+    </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="sub-heading">Moments</span>
+            <h2 class="section-title">Our Gallery</h2>
+        </div>
+    </div>
+</section>
 
 </main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="contact">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <h2 class="logo">Wonderlust<span>.</span></h2>
+            <p>Crafting moments through flavor since 2010.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="#about">About Us</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Visit Us</h4>
+            <p>Mumbai, India</p>
+            <p>+91 98765 43210</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Wonderlust Restro.</p>
+    </div>
+</footer>
+
+<!-- ================= BOOK TABLE MODAL ================= -->
+<div class="modal" id="bookTableModal">
+    <div class="modal-content">
+        <button class="modal-close" id="closeBookTableModal">&times;</button>
+        <h2>Book a Table</h2>
+
+        <form class="booking-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="date" required>
+            <input type="time" required>
+
+            <select required>
+                <option value="">Guests</option>
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+                <option>6+</option>
+            </select>
+
+            <button type="submit" class="btn primary">Reserve Now</button>
+        </form>
+    </div>
+</div>
+
+<!-- ================= ORDER MODAL ================= -->
+<div class="modal" id="order-modal">
+    <div class="modal-content order-modal">
+        <button class="modal-close" id="closeOrderModal">&times;</button>
+
+        <h2 id="order-item-name"></h2>
+        <p id="order-item-price"></p>
+
+        <div class="quantity-control">
+            <button id="quantity-decrease">-</button>
+            <input type="number" id="quantity-input" value="1" min="1">
+            <button id="quantity-increase">+</button>
+        </div>
+
+        <button class="btn primary full-width">Add To Chart</button>
+    </div>
+</div>
+
+<script type="module" src="js/script.js"></script>
 
 </body>
 </html>

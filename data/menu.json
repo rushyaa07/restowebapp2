@@ -1,0 +1,325 @@
+[
+  {
+    "id": 1,
+    "name": "Espresso",
+    "category": "coffee-shop",
+    "price": 140,
+    "description": "Strong and bold espresso shot",
+    "image": "/assets/images/espresso.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Americano",
+    "category": "coffee-shop",
+    "price": 160,
+    "description": "Espresso with hot water",
+    "image": "/assets/images/americano.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Cappuccino",
+    "category": "coffee-shop",
+    "price": 220,
+    "description": "Espresso with milk foam",
+    "image": "/assets/images/cappuccino.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Caffè Latte",
+    "category": "coffee-shop",
+    "price": 240,
+    "description": "Creamy milk espresso",
+    "image": "/assets/images/latte.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mocha",
+    "category": "coffee-shop",
+    "price": 260,
+    "description": "Chocolate flavored espresso",
+    "image": "/assets/images/mocha.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Cold Brew",
+    "category": "coffee-shop",
+    "price": 280,
+    "description": "Slow steeped cold coffee",
+    "image": "/assets/images/coldbrew.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Iced Latte",
+    "category": "coffee-shop",
+    "price": 260,
+    "description": "Chilled espresso milk drink",
+    "image": "/assets/images/icedlatte.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Caramel Latte",
+    "category": "coffee-shop",
+    "price": 290,
+    "description": "Latte with caramel syrup",
+    "image": "/assets/images/caramellatte.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Vanilla Latte",
+    "category": "coffee-shop",
+    "price": 290,
+    "description": "Vanilla infused latte",
+    "image": "/assets/images/vanillalatte.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Flat White",
+    "category": "coffee-shop",
+    "price": 240,
+    "description": "Smooth velvety coffee",
+    "image": "/assets/images/flatwhite.jpg"
+  },
+
+  {
+    "id": 11,
+    "name": "Hot Chocolate",
+    "category": "beverage",
+    "price": 230,
+    "description": "Rich creamy hot chocolate",
+    "image": "/assets/images/hotchocolate.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Blueberry Shake",
+    "category": "beverage",
+    "price": 320,
+    "description": "Creamy blueberry shake",
+    "image": "/assets/images/blueberry.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Strawberry Shake",
+    "category": "beverage",
+    "price": 300,
+    "description": "Fresh strawberry milkshake",
+    "image": "/assets/images/strawberryshake.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Chocolate Shake",
+    "category": "beverage",
+    "price": 310,
+    "description": "Thick chocolate shake",
+    "image": "/assets/images/chocolateshake.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Mango Smoothie",
+    "category": "beverage",
+    "price": 280,
+    "description": "Fresh mango smoothie",
+    "image": "/assets/images/mango.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Cold Coffee",
+    "category": "beverage",
+    "price": 250,
+    "description": "Chilled coffee drink",
+    "image": "/assets/images/coldcoffee.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Lemon Iced Tea",
+    "category": "beverage",
+    "price": 200,
+    "description": "Refreshing iced tea",
+    "image": "/assets/images/icedtea.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Peach Iced Tea",
+    "category": "beverage",
+    "price": 210,
+    "description": "Peach flavored iced tea",
+    "image": "/assets/images/peachtea.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Fruit Mocktail",
+    "category": "beverage",
+    "price": 260,
+    "description": "Mixed fruit mocktail",
+    "image": "/assets/images/mocktail.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Mint Cooler",
+    "category": "beverage",
+    "price": 190,
+    "description": "Cool mint refreshment",
+    "image": "/assets/images/mintcooler.jpg"
+  },
+
+  {
+    "id": 21,
+    "name": "Veg Sandwich",
+    "category": "snacks",
+    "price": 210,
+    "description": "Grilled vegetable sandwich",
+    "image": "/assets/images/sandwich.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Cheese Toast",
+    "category": "snacks",
+    "price": 200,
+    "description": "Cheesy toasted bread",
+    "image": "/assets/images/cheesetoast.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Paneer Sandwich",
+    "category": "snacks",
+    "price": 260,
+    "description": "Grilled paneer sandwich",
+    "image": "/assets/images/paneersandwich.jpg"
+  },
+  {
+    "id": 24,
+    "name": "French Fries",
+    "category": "snacks",
+    "price": 190,
+    "description": "Crispy golden fries",
+    "image": "/assets/images/frenchfries.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Garlic Bread",
+    "category": "snacks",
+    "price": 220,
+    "description": "Buttery garlic bread",
+    "image": "/assets/images/garlicbread.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Cheese Balls",
+    "category": "snacks",
+    "price": 260,
+    "description": "Crispy cheese balls",
+    "image": "/assets/images/cheeseballs.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Veg Puff",
+    "category": "snacks",
+    "price": 150,
+    "description": "Flaky vegetable puff",
+    "image": "/assets/images/puff.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Paneer Wrap",
+    "category": "snacks",
+    "price": 280,
+    "description": "Paneer stuffed wrap",
+    "image": "/assets/images/wrap.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Nachos",
+    "category": "snacks",
+    "price": 240,
+    "description": "Crispy nachos with dip",
+    "image": "/assets/images/nachos.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Cheese Croissant",
+    "category": "snacks",
+    "price": 270,
+    "description": "Flaky cheese croissant",
+    "image": "/assets/images/croissant.jpg"
+  },
+
+  {
+    "id": 31,
+    "name": "Chocolate Brownie",
+    "category": "desserts",
+    "price": 240,
+    "description": "Warm chocolate brownie",
+    "image": "/assets/images/brownie.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Cheesecake Slice",
+    "category": "desserts",
+    "price": 340,
+    "description": "Creamy cheesecake slice",
+    "image": "/assets/images/cheesecake.jpg"
+  },
+  {
+    "id": 33,
+    "name": "Chocolate Cake",
+    "category": "desserts",
+    "price": 280,
+    "description": "Rich chocolate cake",
+    "image": "/assets/images/cake.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Red Velvet Cake",
+    "category": "desserts",
+    "price": 320,
+    "description": "Soft red velvet cake",
+    "image": "/assets/images/redvelvet.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Blueberry Muffin",
+    "category": "desserts",
+    "price": 210,
+    "description": "Fresh baked muffin",
+    "image": "/assets/images/muffin.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Chocolate Muffin",
+    "category": "desserts",
+    "price": 210,
+    "description": "Chocolate filled muffin",
+    "image": "/assets/images/chocomuffin.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Croissant",
+    "category": "desserts",
+    "price": 230,
+    "description": "Buttery flaky croissant",
+    "image": "/assets/images/croissant.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Donut",
+    "category": "desserts",
+    "price": 190,
+    "description": "Soft glazed donut",
+    "image": "/assets/images/donut.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Chocolate Tart",
+    "category": "desserts",
+    "price": 320,
+    "description": "Rich chocolate tart",
+    "image": "/assets/images/tart.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Ice Cream Scoop",
+    "category": "desserts",
+    "price": 160,
+    "description": "Classic vanilla ice cream",
+    "image": "/assets/images/icecream.jpg"
+  }
+]

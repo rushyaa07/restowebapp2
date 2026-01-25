@@ -237,50 +237,42 @@ img {
     margin-bottom: 0.2rem;
 }
 
-
 /* =========================================================
    MENU SECTION
    ========================================================= */
 
-   /* light background section */
-   .light{
+.light {
     background: var(--bg-light);
-   }
+}
 
-   /* search bar wraper */
-   .menu-search{
+.menu-search {
     max-width: 400px;
     margin: 0 auto 3rem auto;
-   
-   }
+}
 
-   /* search input field */
-    .menu-search input{
-     width: 100%;
-     padding: 14px 18px;
-     border: 2px solid #e0e0e0;
-     border-radius: 50px;
-     font-size: 1rem;
-     outline: none;
-     transition: var(--transition);
-    }
+.menu-search input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
 
-    /* search input focus state  */
-    .menu-search input:focus{
-     border-color: var(--primary);
-     box-shadow: 0 0 0 3px rgba(226, 79, 28, 0.15);
-    }
+.menu-search input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(226, 79, 28, 0.15);
+}
 
-    /* filter button container */
-    .filter-group {
+.filter-group {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 4rem;
-    flex-wrap: wrap;                
+    flex-wrap: wrap;
 }
 
-/* Individual filter button */
 .filter-btn {
     padding: 10px 24px;
     border: 1px solid #e5e5e5;
@@ -291,20 +283,17 @@ img {
     font-weight: 500;
 }
 
-/* Hover state for filter buttons */
 .filter-btn:hover {
     background: var(--accent-muted);
     color: var(--primary);
 }
 
-/* Active filter button */
 .filter-btn.active {
     background: var(--primary);
     color: var(--white);
     border-color: var(--primary);
 }
 
-/* Menu section */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -313,87 +302,310 @@ img {
     margin: 0 auto;
 }
 
-/* menu card */
 .menu-card {
     background: var(--white);
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
     overflow: hidden;
     transition: var(--transition);
-    overflow: hidden;
     position: relative;
     opacity: 0;
     transform: translateY(30px);
 }
 
-/* card fade in animation triggered by js  */
 .menu-card.fade-in {
     opacity: 1;
     transform: translateY(0);
-    
 }
 
-/* hover lift effect */
 .menu-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-10px);
 }
 
-/* MENU IMAGE */
-/* wrapper for menu image */
 .menu-image-wrapper {
     height: 200px;
     overflow: hidden;
     position: relative;
 }
 
-/* menu image */
-.menu-card img{
+.menu-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
-/* zoom image on hover */
 .menu-card:hover img {
     transform: scale(1.1);
 }
 
-/* MENU CONTENT */
 .menu-info {
     padding: 1.5rem;
 }
 
-/* header row with title and price */
-.menu-header{
+.menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom:  1rem;
+    margin-bottom: 1rem;
 }
-/* menu item title */
-.menu-header h3{
+
+.menu-header h3 {
     font-size: 1.4rem;
 }
 
-/* price styling  */
-.price{
+.price {
     color: var(--primary);
     font-weight: 700;
     font-size: 1.25rem;
-
 }
 
-/* menu description styling */
-.menu-discription{
+.menu-description {
     font-size: 0.95rem;
     color: var(--text-light);
     margin-bottom: 1.5rem;
+
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    line-clamp:2;
+
     overflow: hidden;
 }
+.menu-card .btn {
+    width: 100%;
+    text-align: center;
+}
 
+
+/* MODAL BASE */
+/* Full -Screen modal overlay  */
+.modal{
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+     z-index: 999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.booking-form input,
+.booking-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
     
+}
+
+/* =========================================================
+   ORDER MODAL
+   ========================================================= */
+
+.order-modal{
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    max-width: 380px;
+    animation:scaleln 0.25s ease;
+}
+/* Order modal heading */
+.order-title {
+  font-size: 1.6rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.25rem;
+}
+
+/* Display price in order modal */
+.order-price {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* =========================================================
+   QUANTITY CONTROL
+   ========================================================= */
+   .quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 1.8rem;
+   }
+
+   .quantity-control input {
+    width: 60px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+   }
+
+   .quantity-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+   }
+
+   .full-width {
+    width: 100%;
+   }
+
+   /* =========================================================
+   ANIMATIONS
+   ========================================================= */
+   @keyframes scaleln{
+    from{
+        transform:scale(0.9);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+   }
+   /* =========================================================
+   MOBILE UTILITIES
+   ========================================================= */
+   .mobile-only {
+    display: none;
+   }
+
+   .mobile-actions{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+    
+   }
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+/* Footer background and spacing */
+.footer {
+    background: #181818;
+    color: #a8a8a8;
+    padding: 80px 0 0;
+}
+
+/* Footer grid layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 4rem;
+    padding-bottom: 60px;
+}
+
+/* Footer section headings */
+.footer h4 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Footer links */
+.footer-links a {
+    display: block;
+    margin-bottom: 0.8rem;
+    transition: var(--transition);
+}
+
+/* Footer link hover effect */
+.footer-links a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+/* Footer bottom copyright */
+.footer-bottom {
+    border-top: 1px solid #2d3436;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.nav-list.active{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:100px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:2rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* MODAL BASE */
+.modal {
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+     z-index: 999;
+
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}   
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    
+}
