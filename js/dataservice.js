@@ -1,10 +1,10 @@
 // ================= MENU DATA SERVICE =================
-// Fetches menu data from local JSON file
-// Handles network + parsing errors safely
+// Fetches menu data from local JSON file (SAFE + CORRECT PATH)
 
 export async function fetchMenuData() {
     try {
-        const response = await fetch("/data/menu.json");
+        // ✅ RELATIVE PATH (MOST IMPORTANT FIX)
+        const response = await fetch("./data/menu.json");
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -12,7 +12,6 @@ export async function fetchMenuData() {
 
         const data = await response.json();
 
-        // Ensure valid array
         if (!Array.isArray(data)) {
             throw new Error("Menu data is not an array");
         }

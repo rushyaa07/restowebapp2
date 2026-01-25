@@ -45,7 +45,7 @@
     "category": "coffee-shop",
     "price": 280,
     "description": "Slow steeped cold coffee",
-    "image": "/assets/images/coldbrew.jpg"
+    "image": "/assets/images/coldbrew.WEBP"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "category": "coffee-shop",
     "price": 260,
     "description": "Chilled espresso milk drink",
-    "image": "/assets/images/icedlatte.jpg"
+    "image": "/assets/images/icedlatte.WEBP"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "category": "coffee-shop",
     "price": 290,
     "description": "Vanilla infused latte",
-    "image": "/assets/images/vanillalatte.jpg"
+    "image": "/assets/images/vanillalatte.jpeg"
   },
   {
     "id": 10,
@@ -118,15 +118,15 @@
     "category": "beverage",
     "price": 280,
     "description": "Fresh mango smoothie",
-    "image": "/assets/images/mango.jpg"
+    "image": "/assets/images/mango.WEBP"
   },
   {
     "id": 16,
     "name": "Cold Coffee",
-    "category": "beverage",
+    "category": "coffee-shop",
     "price": 250,
     "description": "Chilled coffee drink",
-    "image": "/assets/images/coldcoffee.jpg"
+    "image": "/assets/images/coldcoffee.jpeg"
   },
   {
     "id": 17,
@@ -134,7 +134,7 @@
     "category": "beverage",
     "price": 200,
     "description": "Refreshing iced tea",
-    "image": "/assets/images/icedtea.jpg"
+    "image": "/assets/images/icedtea.WEBP"
   },
   {
     "id": 18,
@@ -175,7 +175,7 @@
     "category": "snacks",
     "price": 200,
     "description": "Cheesy toasted bread",
-    "image": "/assets/images/cheesetoast.jpg"
+    "image": "/assets/images/cheesetoast.jpeg"
   },
   {
     "id": 23,
@@ -183,7 +183,7 @@
     "category": "snacks",
     "price": 260,
     "description": "Grilled paneer sandwich",
-    "image": "/assets/images/paneersandwich.jpg"
+    "image": "/assets/images/paneersandwich.jpeg"
   },
   {
     "id": 24,
@@ -191,23 +191,23 @@
     "category": "snacks",
     "price": 190,
     "description": "Crispy golden fries",
-    "image": "/assets/images/frenchfries.jpg"
+    "image": "/assets/images/frenchfries.jpeg"
   },
   {
     "id": 25,
-    "name": "Garlic Bread",
+    "name": "Butter Garlic Bread",
     "category": "snacks",
     "price": 220,
     "description": "Buttery garlic bread",
-    "image": "/assets/images/garlicbread.jpg"
+    "image": "/assets/images/garlicbread.jpeg"
   },
   {
     "id": 26,
-    "name": "Cheese Balls",
+    "name": "Cheese corn Balls",
     "category": "snacks",
     "price": 260,
     "description": "Crispy cheese balls",
-    "image": "/assets/images/cheeseballs.jpg"
+    "image": "/assets/images/cheeseballs.jpeg"
   },
   {
     "id": 27,
@@ -231,18 +231,18 @@
     "category": "snacks",
     "price": 240,
     "description": "Crispy nachos with dip",
-    "image": "/assets/images/nachos.jpg"
+    "image": "/assets/images/nachos.jpeg"
   },
   {
-    "id": 30,
-    "name": "Cheese Croissant",
-    "category": "snacks",
-    "price": 270,
-    "description": "Flaky cheese croissant",
-    "image": "/assets/images/croissant.jpg"
-  },
+  "id": 30,
+  "name": "Corn Nuggets",
+  "category": "snacks",
+  "price": 210,
+  "description": "Crispy fried corn nuggets with a soft cheesy center",
+  "image": "/assets/images/corn-nuggets.jpg"
+},
 
-  {
+{
     "id": 31,
     "name": "Chocolate Brownie",
     "category": "desserts",
@@ -264,7 +264,7 @@
     "category": "desserts",
     "price": 280,
     "description": "Rich chocolate cake",
-    "image": "/assets/images/cake.jpg"
+    "image": "/assets/images/cake.AVIF"
   },
   {
     "id": 34,
@@ -272,7 +272,7 @@
     "category": "desserts",
     "price": 320,
     "description": "Soft red velvet cake",
-    "image": "/assets/images/redvelvet.jpg"
+    "image": "/assets/images/redvelvet.avif"
   },
   {
     "id": 35,
@@ -288,7 +288,7 @@
     "category": "desserts",
     "price": 210,
     "description": "Chocolate filled muffin",
-    "image": "/assets/images/chocomuffin.jpg"
+    "image": "/assets/images/chocomuffin.jpeg"
   },
   {
     "id": 37,
@@ -296,7 +296,7 @@
     "category": "desserts",
     "price": 230,
     "description": "Buttery flaky croissant",
-    "image": "/assets/images/croissant.jpg"
+    "image": "/assets/images/croissant2.jpg"
   },
   {
     "id": 38,

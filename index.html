@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wonderlust Restro</title>
+    <title>BLEND Caffè</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -22,17 +22,16 @@
 
         <a href="#home" class="logo">BLEND Caffè<span>.</span></a>
 
-        <ul class="nav-list">
-            <li><a href="#home" class="nav-link">Home</a></li>
+        <ul class="nav-list" id="navList">
+            <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">Our Story</a></li>
             <li><a href="#menu" class="nav-link">Menu</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
-            <a href="#contact" class="btn btn-sm primary">Book a Table</a>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <button class="btn btn-sm primary" id="openBookTable">Book a Table</button>
+            <button class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -41,18 +40,18 @@
 
 <main>
 
-<!-- ================= HERO SECTION ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero" id="home">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
         <span class="hero-badge">Est. 2010</span>
 
         <h1 class="hero-title">
-            Brewed to Perfection,<br>Served with Soul.
+            Crafted with Purpose,<br>Served with Passione.
         </h1>
 
         <p class="hero-subtitle">
-            Where roasted beans meet quiet conversations.
+            Where roasted beans meet quiet conversations, shaped by Gusto.
         </p>
 
         <div class="hero-buttons">
@@ -62,37 +61,39 @@
     </div>
 </section>
 
-<!-- ================= ABOUT SECTION ================= -->
-<section id="about" class="section about">
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section reveal">
     <div class="container">
         <div class="about-grid">
-            <div class="about-image-wrapper">
+
+            <div class="about-image-wrapper" style="position:relative;">
                 <img 
                     src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1350&q=80"
                     alt="Exquisite Dish"
                     class="main-img"
                 >
                 <div class="experience-badge">
-                    <span class="num">15+</span>
-                    <span class="txt">Years of<br>Excellence</span>
+                    <h3>15+</h3>
+                    <p>Years of<br>Excellence</p>
                 </div>
             </div>
 
             <div class="about-text">
                 <span class="sub-heading">An Elevated Dining Experience</span>
                 <h2 class="section-title">A Story Told Through Flavor</h2>
-                <p>Every dish is meticulously crafted using the finest ingredients.</p>
-                <p>Located at the heart of Mumbai.</p>
+                <p>Meticulously crafted with the finest ingredients and Italian arte.</p>
+                <p>A refined caffè moment in Mumbai.</p>
                 <a href="#menu" class="btn-text">
                     Taste What We’re Known For <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
+
         </div>
     </div>
 </section>
 
-<!-- ================= MENU SECTION ================= -->
-<section id="menu" class="section light">
+<!-- ================= MENU ================= -->
+<section id="menu" class="section light reveal reveal-active">
     <div class="container">
 
         <div class="section-header">
@@ -105,10 +106,10 @@
         </div>
 
         <div class="filter-group">
-            <button class="filter-btn active" data-category="all">All Dishes</button>
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="coffee-shop">Coffee</button>
             <button class="filter-btn" data-category="snacks">Snacks</button>
             <button class="filter-btn" data-category="beverage">Beverages</button>
-            <button class="filter-btn" data-category="coffee-shop">Coffee Shop</button>
             <button class="filter-btn" data-category="desserts">Desserts</button>
         </div>
 
@@ -116,31 +117,21 @@
     </div>
 </section>
 
-<!-- ================= GALLERY ================= -->
-<section id="gallery" class="section">
-    <div class="container">
-        <div class="section-header">
-            <span class="sub-heading">Moments</span>
-            <h2 class="section-title">Our Gallery</h2>
-        </div>
-    </div>
-</section>
-
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer class="footer" id="contact">
+<footer class="footer reveal" id="contact">
     <div class="container footer-grid">
+
         <div class="footer-brand">
-            <h2 class="logo">Wonderlust<span>.</span></h2>
+            <h2 class="logo">BLEND Caffè<span>.</span></h2>
             <p>Crafting moments through flavor since 2010.</p>
         </div>
 
         <div class="footer-links">
             <h4>Explore</h4>
-            <a href="#about">About Us</a>
+            <a href="#about">About</a>
             <a href="#menu">Menu</a>
-            <a href="#gallery">Gallery</a>
         </div>
 
         <div class="footer-contact">
@@ -148,10 +139,11 @@
             <p>Mumbai, India</p>
             <p>+91 98765 43210</p>
         </div>
+
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 Wonderlust Restro.</p>
+        <p>&copy; 2026 BLEND Caffè. All Rights Reserved.</p>
     </div>
 </footer>
 
@@ -186,19 +178,58 @@
         <button class="modal-close" id="closeOrderModal">&times;</button>
 
         <h2 id="order-item-name"></h2>
-        <p id="order-item-price"></p>
+        <p class="order-price" id="order-item-price"></p>
 
         <div class="quantity-control">
-            <button id="quantity-decrease">-</button>
+            <button class="quantity-btn" id="quantity-decrease">-</button>
             <input type="number" id="quantity-input" value="1" min="1">
-            <button id="quantity-increase">+</button>
+            <button class="quantity-btn" id="quantity-increase">+</button>
         </div>
 
-        <button class="btn primary full-width">Add To Chart</button>
+        <button class="btn primary full-width">Add To Cart</button>
     </div>
 </div>
+<!-- designer intro modal -->
 
 <script type="module" src="js/script.js"></script>
+
+<!-- DESIGNER INTRO MODAL -->
+<!-- DESIGNER INTRO MODAL -->
+<!-- INTRO POPUP MODAL -->
+<div id="introModal" class="intro-modal">
+  <div class="intro-modal-content">
+
+    <button class="intro-close" id="closeIntro">&times;</button>
+
+    <div class="intro-profile">
+      <img
+        src="/assets/images/rushikesh.jpeg"
+        alt="Designer"
+        class="intro-avatar"
+      />
+      <div class="intro-brand">
+  <span class="brand-name">BLEND Caffè</span>
+  <span class="brand-tagline">Crafted with Purpose</span>
+</div>
+    </div>
+
+    <h2 class="intro-title">Hello</h2>
+
+ <p class="intro-text">
+  Hi, I’m <strong class="designer-name">Rushikesh</strong>.<br>
+  I designed and developed this website with a focus on
+  <span class="highlight">clarity</span>,
+  <span class="highlight">creativity</span>, and
+  <span class="highlight">performance</span>.<br><br>
+  Every detail you see is thoughtfully crafted to deliver
+  a smooth and memorable experience.
+</p>
+    <button class="btn primary intro-btn" id="introGetStarted">
+      Get Started
+    </button>
+
+  </div>
+</div>
 
 </body>
 </html>

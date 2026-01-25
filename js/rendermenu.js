@@ -1,15 +1,16 @@
 // ================= RENDER MENU =================
-// Dynamically creates and displays menu cards
-// Accepts menu data and target container as parameters
+// Safe, error-proof menu renderer
 
 export function renderMenu(items, container) {
-    if (!container) return;
+    if (!container) {
+        console.error("Menu container not found");
+        return;
+    }
 
-    // Clear existing menu items
     container.innerHTML = "";
 
     // Empty state
-    if (!items || !items.length) {
+    if (!Array.isArray(items) || items.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
                 <p>No items found 😕</p>
@@ -18,41 +19,56 @@ export function renderMenu(items, container) {
         return;
     }
 
-    // Render each menu item
-    items.forEach(item => {
-        const card = document.createElement("article");
-        card.className = "menu-card";
+    items.forEach((item, index) => {
+        try {
+            // 🔒 SAFETY CHECKS
+            const name = item?.name ?? "Item";
+            const description = item?.description ?? "";
+            const image = item?.image ?? "";
+            const price = Number(item?.price);
 
-        card.innerHTML = `
-            <div class="menu-image-wrapper">
-                <img 
-                    src="${item.image}" 
-                    alt="${item.name}" 
-                    loading="lazy"
-                >
-            </div>
+            if (!image || isNaN(price)) {
+                console.warn(`Skipped item at index ${index}`, item);
+                return; // skip broken item
+            }
 
-            <div class="menu-info">
-                <div class="menu-header">
-                    <h3>${item.name}</h3>
-                    <span class="price">₹${Number(item.price).toFixed(0)}</span>
+            const card = document.createElement("article");
+            card.className = "menu-card";
+
+            card.innerHTML = `
+                <div class="menu-image-wrapper">
+                    <img
+                        src="${image}"
+                        alt="${name}"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                    >
                 </div>
 
-                <p class="menu-description">
-                    ${item.description}
-                </p>
+                <div class="menu-info">
+                    <div class="menu-header">
+                        <h3>${name}</h3>
+                        <span class="price">₹${price.toFixed(0)}</span>
+                    </div>
 
-                <button 
-                    class="btn primary btn-sm w-100 order-btn add-to-order"
-                    data-id="${item.id}"
-                    data-name="${item.name}"
-                    data-price="${item.price}"
-                >
-                    <i class="fas fa-plus"></i> Add to Order
-                </button>
-            </div>
-        `;
+                    <p class="menu-description">
+                        ${description}
+                    </p>
 
-        container.appendChild(card);
+                    <button
+                        class="btn primary btn-sm add-to-order"
+                        data-name="${name}"
+                        data-price="${price}"
+                    >
+                        <i class="fas fa-plus"></i> Add to Order
+                    </button>
+                </div>
+            `;
+
+            container.appendChild(card);
+
+        } catch (err) {
+            console.error("Failed to render menu item:", item, err);
+        }
     });
 }
