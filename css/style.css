@@ -775,6 +775,58 @@ img {
 }
 
 /* =========================================================
+   FORCE VISIBILITY FOR ALL SECTION CONTENT
+   ========================================================= */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6,
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+  color: #222121 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+section p,
+section span,
+section li,
+section a,
+.section p,
+.section span,
+.section li,
+.section a {
+  color: #333333 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Specific fix for story/about section */
+.about-section h1,
+.about-section h2,
+.about-section h3,
+.story-section h1,
+.story-section h2,
+.story-section h3 {
+  color: #1a1a1a !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+.about-section p,
+.story-section p {
+  color: #444444 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+}
+
+/* =========================================================
    ABOUT SECTION
    ========================================================= */
 .about-grid {
@@ -1541,15 +1593,21 @@ img {
 }
 
 /* Order Modal */
+/* =========================================================
+   ORDER MODAL - PREMIUM REDESIGN
+   ========================================================= */
 .order-modal {
   text-align: center;
+  animation: scaleIn 0.3s ease;
 }
 
 .order-modal h3 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
+  font-weight: 800;
   margin-bottom: 1rem;
-  color: #222 !important;
+  color: #1a1a1a !important;
+  letter-spacing: -0.02em;
 }
 
 .order-modal .menu-image {
@@ -1558,53 +1616,157 @@ img {
   object-fit: cover;
   border-radius: var(--border-radius-md);
   margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
+/* Price Display - Solid Color for Visibility */
 .order-price,
 #order-item-price {
-  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: #111 !important;
-  margin: 1rem 0;
+  color: #1a1a1a !important;
+  margin: 1.2rem 0;
+  letter-spacing: -0.5px;
   
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* Remove gradient for better visibility */
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
 }
 
+/* Quantity Control - Enhanced Design */
 .quantity-control {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   margin: 2rem 0;
 }
 
+/* Quantity Buttons - Plus/Minus */
+.quantity-control button,
+#quantity-decrease,
+#quantity-increase {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 12px !important;
+  border: 2px solid rgba(231, 185, 34, 0.3) !important;
+  
+  background: linear-gradient(145deg, #ffffff, #fafafa) !important;
+  color: #1a1a1a !important;
+  
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.quantity-control button:hover,
+#quantity-decrease:hover,
+#quantity-increase:hover {
+  background: var(--gradient-gold) !important;
+  border-color: transparent !important;
+  color: #1a1a1a !important;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(231, 185, 34, 0.3);
+}
+
+.quantity-control button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Quantity Input Field */
 .quantity-control input {
   width: 100px;
   padding: 14px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-align: center;
   
-  border-radius: var(--border-radius-sm);
+  border-radius: 12px;
   border: 2px solid rgba(231, 185, 34, 0.2);
   outline: none;
   
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a !important;
   
   pointer-events: auto;
   transition: var(--transition);
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .quantity-control input:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 4px rgba(231, 185, 34, 0.15);
+  box-shadow: 
+    0 0 0 4px rgba(231, 185, 34, 0.15),
+    0 8px 20px rgba(231, 185, 34, 0.2);
+  background: #ffffff;
 }
 
-.order-modal .btn {
+/* Add to Cart Button - Premium Style */
+.order-modal .btn,
+.order-modal button[type="submit"],
+.order-modal .add-to-cart-btn {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  padding: 16px 24px;
+  
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  
+  background: var(--gradient-gold) !important;
+  background-size: 200% auto;
+  color: #1a1a1a !important;
+  
+  border: none !important;
+  border-radius: 14px;
+  
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  
+  box-shadow: 
+    0 12px 30px rgba(231, 185, 34, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  
+  /* Perfect centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.order-modal .btn:hover,
+.order-modal button[type="submit"]:hover {
+  background-position: 100% center;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 18px 40px rgba(231, 185, 34, 0.6),
+    0 0 0 4px rgba(245, 197, 66, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.order-modal .btn:active {
+  transform: translateY(-1px) scale(1);
+}
+
+/* Order Modal Description */
+.order-modal .description,
+.order-modal p {
+  font-size: 0.95rem;
+  color: #666 !important;
+  line-height: 1.6;
+  margin: 1rem 0;
 }
 
 /* ================= BOOK TABLE MODAL - PREMIUM REDESIGN ================= */
@@ -1793,6 +1955,8 @@ form.booking-form button:active {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  
+  padding: 20px;
 
   opacity: 0;
   visibility: hidden;
@@ -1807,10 +1971,10 @@ form.booking-form button:active {
 .intro-modal-content {
   position: relative;
   background: linear-gradient(145deg, #ffffff, #fefefe);
-  padding: 4rem 3.5rem;
-  border-radius: var(--border-radius-xl);
-  max-width: 600px;
-  width: 94%;
+  padding: 2.5rem 2rem; /* Reduced from 4rem 3.5rem */
+  border-radius: 28px; /* Reduced from 32px */
+  max-width: 480px; /* Reduced from 600px */
+  width: 90%; /* Reduced from 94% */
   text-align: center;
 
   transform: scale(0.8) translateY(60px) rotateX(10deg);
@@ -1832,7 +1996,7 @@ form.booking-form button:active {
   inset: -3px;
   background: linear-gradient(135deg, #e7b922, #f5c542, #e7b922, #f5c542);
   background-size: 400% 400%;
-  border-radius: var(--border-radius-xl);
+  border-radius: 28px; /* Match the reduced radius */
   z-index: -1;
   animation: borderFlow 5s ease infinite;
 }
@@ -1848,52 +2012,27 @@ form.booking-form button:active {
 }
 
 .intro-close {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  
-  background: var(--gradient-gold);
-  border: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 24px;
-  font-weight: 700;
-  color: #222;
-  
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  
-  box-shadow: 
-    0 6px 20px rgba(231, 185, 34, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.intro-close:hover {
-  transform: rotate(90deg) scale(1.2);
-  box-shadow: 
-    0 12px 35px rgba(231, 185, 34, 0.6),
-    0 0 0 5px rgba(245, 197, 66, 0.2);
+  /* Hide the close button */
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .intro-avatar {
-  width: 150px;
-  height: 150px;
+  width: 110px; /* Reduced from 150px */
+  height: 110px; /* Reduced from 150px */
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 1.8rem;
+  margin: 0 auto 1.2rem; /* Reduced from 1.8rem */
   
-  border: 6px solid transparent;
+  border: 4px solid transparent; /* Reduced from 6px */
   background: 
     linear-gradient(#fff, #fff) padding-box,
     linear-gradient(135deg, #e7b922, #f5c542, #e7b922) border-box;
   
   box-shadow: 
-    0 25px 70px rgba(231, 185, 34, 0.4),
+    0 20px 60px rgba(231, 185, 34, 0.4),
     inset 0 3px 6px rgba(0, 0, 0, 0.1);
   
   animation: avatarFloat 4s ease-in-out infinite;
@@ -1906,16 +2045,17 @@ form.booking-form button:active {
 
 .intro-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2.2rem; /* Reduced from 3rem */
   font-weight: 800;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem; /* Reduced from 0.8rem */
   
-  background: linear-gradient(135deg, #e7b922 0%, #f5c542 50%, #e7b922 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* Changed to dark color for visibility on gold background */
+  color: #1a1a1a !important;
   
-  animation: titleShimmer 4s linear infinite;
+  /* Removed gradient that was making it invisible */
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
   
   position: relative;
 }
@@ -1923,42 +2063,43 @@ form.booking-form button:active {
 .intro-title::after {
   content: '';
   display: block;
-  width: 120px;
-  height: 5px;
+  width: 90px; /* Reduced from 120px */
+  height: 4px;
   background: var(--gradient-gold);
-  margin: 1rem auto 0;
+  margin: 0.8rem auto 0; /* Reduced from 1rem */
   border-radius: 3px;
   box-shadow: 0 2px 10px rgba(231, 185, 34, 0.4);
   animation: lineExpand 3s ease-in-out infinite;
 }
 
 @keyframes lineExpand {
-  0%, 100% { width: 120px; opacity: 0.7; }
-  50% { width: 160px; opacity: 1; }
+  0%, 100% { width: 90px; opacity: 0.7; }
+  50% { width: 120px; opacity: 1; }
 }
 
 .intro-text {
   font-family: 'Inter', sans-serif;
-  font-size: 1.15rem;
-  line-height: 2;
-  color: #555;
-  margin: 2rem 0 3rem;
+  font-size: 1rem; /* Reduced from 1.15rem */
+  line-height: 1.8; /* Reduced from 2 */
+  color: #333 !important; /* Changed from #555 to darker for better visibility */
+  margin: 1.2rem 0 2rem; /* Reduced from 2rem 0 3rem */
   letter-spacing: 0.3px;
   animation: fadeUpText 0.9s ease-out 0.4s both;
 }
 
 .designer-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
+  font-size: 1.2rem; /* Reduced from 1.35rem */
   font-weight: 800;
 
-  background: linear-gradient(135deg, #e7b922, #ffcf40, #e7b922);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* Changed to solid dark color instead of gradient */
+  color: #1a1a1a !important;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
   
-  filter: drop-shadow(0 3px 10px rgba(231, 185, 34, 0.5));
-  animation: nameGlow 3s ease infinite;
+  /* Enhanced text shadow for depth */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes nameGlow {
@@ -1969,7 +2110,7 @@ form.booking-form button:active {
 .highlight {
   position: relative;
   font-weight: 700;
-  color: #222;
+  color: #1a1a1a !important; /* Changed to dark color */
   padding: 0 6px;
 }
 
@@ -1980,7 +2121,7 @@ form.booking-form button:active {
   bottom: -2px;
   width: 100%;
   height: 10px;
-  background: linear-gradient(90deg, transparent, rgba(231,185,34,0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.15), transparent); /* Changed to subtle dark underline */
   border-radius: 5px;
   z-index: -1;
   animation: highlightPulse 2.5s ease infinite;
@@ -1994,9 +2135,9 @@ form.booking-form button:active {
 .intro-profile {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: 1.2rem; /* Reduced from 1.8rem */
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
   animation: fadeInScale 0.9s ease 0.6s both;
 }
 
@@ -2017,16 +2158,17 @@ form.booking-form button:active {
 
 .brand-name {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  font-size: 1.5rem; /* Reduced from 2rem */
   font-weight: 800;
 
-  background: linear-gradient(135deg, #e7b922, #ffcf40, #e7b922);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* Changed to solid dark color instead of gradient */
+  color: #1a1a1a !important;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
   
-  animation: brandShimmer 4s linear infinite;
   display: block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes brandShimmer {
@@ -2036,17 +2178,17 @@ form.booking-form button:active {
 
 .brand-tagline {
   font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.85rem; /* Reduced from 0.95rem */
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #888;
-  margin-top: 8px;
+  color: #555 !important; /* Darker for visibility */
+  margin-top: 6px; /* Reduced from 8px */
   font-weight: 600;
 }
 
 .intro-btn {
-  padding: 18px 52px;
-  font-size: 17px;
+  padding: 14px 40px; /* Reduced from 18px 52px */
+  font-size: 15px; /* Reduced from 17px */
   font-weight: 700;
   letter-spacing: 0.8px;
   
@@ -2234,7 +2376,6 @@ select:focus-visible {
   
   .hero-subtitle {
     font-size: clamp(1rem, 2vw, 1.3rem);
-    padding: 0.8rem 1.5rem;
   }
   
   .section {
@@ -2258,6 +2399,35 @@ select:focus-visible {
     padding: 14px 28px;
     font-size: 14px;
   }
+  
+  /* Designer Intro Modal - Laptop */
+  .intro-modal-content {
+    max-width: 450px; /* Reduced from 520px */
+    padding: 2.2rem 2rem; /* Reduced */
+  }
+  
+  .intro-avatar {
+    width: 100px; /* Reduced from 130px */
+    height: 100px;
+  }
+  
+  .intro-title {
+    font-size: 2rem; /* Reduced from 2.6rem */
+  }
+  
+  .intro-text {
+    font-size: 0.95rem; /* Reduced from 1.05rem */
+    margin: 1.2rem 0 1.8rem; /* Reduced */
+  }
+  
+  .brand-name {
+    font-size: 1.4rem; /* Reduced from 1.75rem */
+  }
+  
+  .intro-btn {
+    padding: 13px 36px; /* Reduced from 16px 44px */
+    font-size: 14px; /* Reduced from 16px */
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2273,6 +2443,34 @@ select:focus-visible {
   
   .main-img {
     height: 350px;
+  }
+  
+  /* Designer Intro Modal - Tablet Landscape */
+  .intro-modal-content {
+    max-width: 420px; /* Reduced from 500px */
+    padding: 2rem 1.8rem; /* Reduced from 3rem 2.5rem */
+  }
+  
+  .intro-avatar {
+    width: 95px; /* Reduced from 125px */
+    height: 95px;
+  }
+  
+  .intro-title {
+    font-size: 1.9rem; /* Reduced from 2.4rem */
+  }
+  
+  .intro-text {
+    font-size: 0.92rem; /* Reduced from 1rem */
+    line-height: 1.75; /* Reduced from 1.85 */
+  }
+  
+  .intro-profile {
+    gap: 1.2rem; /* Reduced from 1.5rem */
+  }
+  
+  .brand-name {
+    font-size: 1.35rem; /* Reduced from 1.65rem */
   }
 }
 
@@ -2329,22 +2527,43 @@ select:focus-visible {
     grid-template-columns: 1fr;
   }
   
+  /* Designer Intro Modal - Tablet Portrait */
   .intro-modal-content {
-    padding: 2.5rem 2rem;
+    max-width: 90%;
+    padding: 2.8rem 2.2rem;
   }
   
   .intro-avatar {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: 115px;
+    margin-bottom: 1.5rem;
   }
   
   .intro-title {
     font-size: 2.2rem;
   }
   
+  .intro-title::after {
+    width: 100px;
+    height: 4px;
+    margin: 0.8rem auto 0;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 1.5rem 0 2.5rem;
+  }
+  
+  .designer-name {
+    font-size: 1.2rem;
+  }
+  
   .intro-profile {
     flex-direction: column;
     text-align: center;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
   }
 
   .intro-brand {
@@ -2352,7 +2571,25 @@ select:focus-visible {
   }
   
   .brand-name {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+  
+  .brand-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .intro-btn {
+    padding: 15px 40px;
+    font-size: 15px;
+  }
+  
+  .intro-close {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    top: 18px;
+    right: 18px;
   }
   
   .about-features {
@@ -2380,10 +2617,132 @@ select:focus-visible {
   }
   
   .modal-content,
-  .book-table-modal,
-  .intro-modal-content {
+  .book-table-modal {
     padding: 2rem 1.5rem;
     max-width: 95%;
+  }
+  
+  /* Designer Intro Modal - Mobile */
+  .intro-modal-content {
+    max-width: 95%;
+    width: 95%;
+    padding: 2.2rem 1.5rem;
+    border-radius: 24px;
+  }
+  
+  .intro-modal-content::before {
+    inset: -2px;
+    border-radius: 24px;
+  }
+  
+  .intro-close {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    top: 14px;
+    right: 14px;
+  }
+  
+  .intro-avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.2rem;
+    border-width: 4px;
+  }
+  
+  .intro-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .intro-title::after {
+    width: 80px;
+    height: 3px;
+    margin: 0.6rem auto 0;
+  }
+  
+  .intro-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 1.2rem 0 2rem;
+    letter-spacing: 0.2px;
+  }
+  
+  .designer-name {
+    font-size: 1.1rem;
+  }
+  
+  .highlight {
+    padding: 0 4px;
+  }
+  
+  .highlight::after {
+    height: 8px;
+  }
+  
+  .intro-profile {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1.3rem;
+  }
+  
+  .brand-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    margin-top: 6px;
+  }
+  
+  .intro-btn {
+    padding: 14px 36px;
+    font-size: 14px;
+    border-radius: 40px;
+  }
+}
+
+/* Extra small devices (landscape phones, 375px and down) */
+@media (max-width: 375px) {
+  .intro-modal-content {
+    padding: 2rem 1.2rem;
+  }
+  
+  .intro-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .intro-title {
+    font-size: 1.6rem;
+  }
+  
+  .intro-title::after {
+    width: 70px;
+  }
+  
+  .intro-text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  
+  .brand-tagline {
+    font-size: 0.7rem;
+  }
+  
+  .intro-btn {
+    padding: 12px 32px;
+    font-size: 13px;
+  }
+  
+  .intro-close {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
   }
 }
 
